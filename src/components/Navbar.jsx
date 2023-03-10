@@ -5,12 +5,14 @@ import {
   FaGithub,
   FaLinkedin,
   FaFacebook,
-  FaLinkedinIn,
+  FaInstagram,
+  FaResearchgate
 } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
-import Logo from '../assets/logo.png';
+import Logo from '../assets/logo1.png';
 import { Link } from 'react-scroll';
+import CV from '../assets/NimeshCVV.png';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -19,7 +21,7 @@ const Navbar = () => {
   return (
     <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
       <div>
-        <img src={Logo} alt='Logo Image' style={{ width: '200px' }} />
+        <img src={Logo} alt='Logo Image' style={{ width: '175px' }} />
       </div>
 
       {/* menu */}
@@ -96,12 +98,12 @@ const Navbar = () => {
       </ul>
 
       {/* Social icons */}
-      <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
+      <div className='hidden lg:flex fixed flex-col top-[25%] left-0'>
         <ul>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href='/'
+              href='https://www.linkedin.com/in/nimesh-bhandari-9ba57a175/' target="_blank"
             >
               Linkedin <FaLinkedin size={30} />
             </a>
@@ -109,26 +111,56 @@ const Navbar = () => {
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href='/'
-            >
+              href='https://github.com/Nims58' target="_blank"
+            > 
               Github <FaGithub size={30} />
             </a>
           </li>
+
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href='/'
-            >
-              Email <HiOutlineMail size={30} />
+              href='https://www.researchgate.net/profile/Nimesh-Bhandari' target="_blank"
+            > 
+              Research G  <FaResearchgate size={30} />
             </a>
           </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
+
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#c1511d]'>
+            <a className='flex justify-between items-center w-full text-gray-300'
+              href="mailto:nimeshbhandari44@gmail.com" target="_blank"> 
+              Email <HiOutlineMail size={30} /> 
+            </a>
+          </li>
+
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-500'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href='/'
+              href='https://www.facebook.com/shreekrishna.bhandari.58/' target="_blank"
             >
-              Resume <BsFillPersonLinesFill size={30} />
+              Facebook <FaFacebook size={30} />
             </a>
+          </li>
+          
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#fa7e1e]'>
+            <a
+              className='flex justify-between items-center w-full text-gray-300'
+              href='https://www.instagram.com/nimesh_bhandu/' target="_blank"
+            >
+              Instagram <FaInstagram size={30} />
+            </a>
+          </li>
+
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
+          <a className='flex justify-between items-center w-full text-gray-300' href={CV} target="" rel="noopener noreferrer">
+  Resume <BsFillPersonLinesFill size={30} />
+</a>
+
+
+
+
+
+
           </li>
         </ul>
       </div>
